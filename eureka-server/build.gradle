@@ -1,0 +1,8 @@
+def projectName = "eureka-server"
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = projectName
+}
