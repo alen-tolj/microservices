@@ -9,9 +9,11 @@ jar {
 }
 
 buildscript {
-    repositories{
+    repositories {
         jcenter()
-        maven { url 'https://repo.spring.io/release/' }
+        maven {
+            url = 'https://repo.spring.io/release/'
+        }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
@@ -24,13 +26,13 @@ repositories {
     }
 }
 
-dependencies {
-    compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
-}
-
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"
     }
+}
+
+dependencies {
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
