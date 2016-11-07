@@ -36,3 +36,5 @@ RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates && \
            "$JAVA_HOME/jre/lib/amd64/"libjfx*.so && \
     apk del build-dependencies && \
     rm "/tmp/"*
+
+ENV PATH $PATH:$JAVA_HOME/bin
